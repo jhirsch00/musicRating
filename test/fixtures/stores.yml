@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  storeName: MyString
+  storeID: 
+  storeLoc: MyString
+
+two:
+  storeName: MyString
+  storeID: 
+  storeLoc: MyString
