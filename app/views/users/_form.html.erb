@@ -14,9 +14,10 @@
 
 
   <div class="control-group">
-    <%= f.label :selected_store, :class => 'control-label' %>
+    <%= f.label :store_name, :class => 'control-label' %>
     <div class="controls">
-      <%= collection_select(:store, :store_id, Store.all, :store_id, :store_name, options={:prompt => "select a store"}, :class => "store")%>
+
+      <%= collection_select(:user, :store_id, Store.all, :id, :store_name, options={:prompt => "select a store"}, :class => "store")%>
     </div>
   </div>
 
