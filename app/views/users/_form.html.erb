@@ -11,10 +11,12 @@
       <%= f.number_field :account_id, :class => 'number_field' %>
     </div>
   </div>
+
+
   <div class="control-group">
     <%= f.label :selected_store, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :selected_store, :class => 'text_field' %>
+      <%= collection_select(:store, :store_id, Store.all, :store_id, :store_name, options={:prompt => "select a store"}, :class => "store")%>
     </div>
   </div>
 
