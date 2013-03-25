@@ -7,7 +7,7 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:store_name) %></th>
-      <th><%= model_class.human_attribute_name(:store_id) %></th>
+      <th><%= model_class.human_attribute_name(:merchant_account_id) %></th>
       <th><%= model_class.human_attribute_name(:store_loc) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -18,7 +18,7 @@
       <tr>
         <td><%= link_to store.id, store_path(store) %></td>
         <td><%= store.store_name %></td>
-        <td><%= store.store_id %></td>
+        <td><%= store.merchant_account_id %></td>
         <td><%= store.store_loc %></td>
         <td><%=l store.created_at %></td>
         <td>
