@@ -1,0 +1,29 @@
+<%= form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :disabled => true, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :account_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :account_id, :disabled => true, :class => 'number_field' %>
+    </div>
+  </div>
+
+
+  <div class="control-group">
+    <%= f.label :store_name, :class => 'control-label' %>
+    <div class="controls">
+
+      <%= collection_select(:user, :store_id, Store.all, :id, :store_name, options={:prompt => "select a store"}, :class => "store")%>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                users_path, :class => 'btn' %>
+  </div>
+<% end %>
