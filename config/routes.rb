@@ -1,4 +1,10 @@
 MusicRating::Application.routes.draw do
+  resources :music_rating_services
+
+
+  resources :login_pages
+
+
   resources :stores
 
 
